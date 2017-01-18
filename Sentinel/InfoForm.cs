@@ -23,17 +23,21 @@ namespace Sentinel
             //поток обновление показателей на форме
             Thread Refresh = new Thread(StartThread);
             Refresh.Start();
+            L_cost.Text = (Global.cost).ToString() + " k/мин";
+            L_time.Text = Global.time;
+            L_total.Text = (Global.total).ToString() + " k";
         }
 
         private void StartThread()
         {
+            
             //обновление показателей
             while (Global.infoShow)
             {
                 L_cost.BeginInvoke(new InvokeDelegate(RefCost));
                 L_time.BeginInvoke(new InvokeDelegate(RefTime));
                 L_total.BeginInvoke(new InvokeDelegate(RefTotal));
-                Thread.Sleep(30000);
+                Thread.Sleep(1000);
             }
         }
 

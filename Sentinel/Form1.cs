@@ -142,6 +142,7 @@ namespace Sentinel
             //после окончания стартового таймера 
             if (!Global.exit)
             {
+                
                 //переход в рабочий режим
                 BeginInvoke(new InvokeDelegate(StartWork));
                 //запуск потока главного таймера
@@ -203,8 +204,8 @@ namespace Sentinel
                 Work.WriteHis(total);
                 //записывает таймер в фаил
                 Work.WriteTimer(Global.timer);
+                Thread.Sleep(60000);
                 //поминутный расчет
-                System.Threading.Thread.Sleep(60000);
                 Global.timer++;
             }
         }

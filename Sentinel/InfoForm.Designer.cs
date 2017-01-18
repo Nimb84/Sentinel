@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.L_cost = new System.Windows.Forms.Label();
             this.L_time = new System.Windows.Forms.Label();
             this.L_total = new System.Windows.Forms.Label();
+            this.TotalHelp = new System.Windows.Forms.ToolTip(this.components);
+            this.timehelp = new System.Windows.Forms.ToolTip(this.components);
+            this.costhelp = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // L_cost
@@ -43,6 +47,7 @@
             this.L_cost.Size = new System.Drawing.Size(43, 20);
             this.L_cost.TabIndex = 0;
             this.L_cost.Text = "cost";
+            this.costhelp.SetToolTip(this.L_cost, "Текущая стоимость минуты");
             // 
             // L_time
             // 
@@ -54,6 +59,7 @@
             this.L_time.Size = new System.Drawing.Size(43, 20);
             this.L_time.TabIndex = 1;
             this.L_time.Text = "time";
+            this.timehelp.SetToolTip(this.L_time, "Общее время работы программы (за день)");
             // 
             // L_total
             // 
@@ -66,6 +72,7 @@
             this.L_total.TabIndex = 2;
             this.L_total.Text = "total";
             this.L_total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TotalHelp.SetToolTip(this.L_total, "Остаток кредитов");
             // 
             // InfoForm
             // 
@@ -94,5 +101,8 @@
         private System.Windows.Forms.Label L_cost;
         private System.Windows.Forms.Label L_time;
         private System.Windows.Forms.Label L_total;
+        private System.Windows.Forms.ToolTip costhelp;
+        private System.Windows.Forms.ToolTip timehelp;
+        private System.Windows.Forms.ToolTip TotalHelp;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.B_Eva = new System.Windows.Forms.Button();
             this.TB_Eva = new System.Windows.Forms.TextBox();
             this.CB_Less = new System.Windows.Forms.ComboBox();
@@ -49,6 +50,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.setthelp = new System.Windows.Forms.ToolTip(this.components);
+            this.helphelp = new System.Windows.Forms.ToolTip(this.components);
+            this.Evahelp = new System.Windows.Forms.ToolTip(this.components);
+            this.namhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.procevahelp = new System.Windows.Forms.ToolTip(this.components);
+            this.bonhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.commhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.bonprochelp = new System.Windows.Forms.ToolTip(this.components);
+            this.totalhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.datehelp = new System.Windows.Forms.ToolTip(this.components);
+            this.hishelp = new System.Windows.Forms.ToolTip(this.components);
+            this.timehelp = new System.Windows.Forms.ToolTip(this.components);
+            this.Starthelp = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // B_Eva
@@ -61,6 +75,7 @@
             this.B_Eva.Name = "B_Eva";
             this.B_Eva.Size = new System.Drawing.Size(25, 25);
             this.B_Eva.TabIndex = 0;
+            this.procevahelp.SetToolTip(this.B_Eva, "Подтверждение ввода оценки");
             this.B_Eva.UseVisualStyleBackColor = false;
             this.B_Eva.Click += new System.EventHandler(this.B_Eva_Click);
             // 
@@ -70,6 +85,7 @@
             this.TB_Eva.Name = "TB_Eva";
             this.TB_Eva.Size = new System.Drawing.Size(22, 20);
             this.TB_Eva.TabIndex = 1;
+            this.Evahelp.SetToolTip(this.TB_Eva, "Ввод оценки (1 - 12)");
             this.TB_Eva.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Eva_KeyDown);
             // 
             // CB_Less
@@ -80,6 +96,7 @@
             this.CB_Less.Name = "CB_Less";
             this.CB_Less.Size = new System.Drawing.Size(200, 21);
             this.CB_Less.TabIndex = 2;
+            this.namhelp.SetToolTip(this.CB_Less, "Выбор предмета");
             // 
             // L_Total
             // 
@@ -92,6 +109,7 @@
             this.L_Total.Size = new System.Drawing.Size(38, 16);
             this.L_Total.TabIndex = 3;
             this.L_Total.Text = "total";
+            this.totalhelp.SetToolTip(this.L_Total, "Количество кредитов");
             // 
             // TB_Bonus
             // 
@@ -99,6 +117,7 @@
             this.TB_Bonus.Name = "TB_Bonus";
             this.TB_Bonus.Size = new System.Drawing.Size(40, 20);
             this.TB_Bonus.TabIndex = 5;
+            this.bonhelp.SetToolTip(this.TB_Bonus, "Ввод бонуса (1) или штрафа (-1)");
             this.TB_Bonus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Bonus_KeyDown);
             // 
             // TB_ReasonBonus
@@ -107,6 +126,7 @@
             this.TB_ReasonBonus.Name = "TB_ReasonBonus";
             this.TB_ReasonBonus.Size = new System.Drawing.Size(179, 20);
             this.TB_ReasonBonus.TabIndex = 6;
+            this.commhelp.SetToolTip(this.TB_ReasonBonus, "Комментарий к бонусу");
             this.TB_ReasonBonus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_ReasonBonus_KeyDown);
             // 
             // B_Bonus
@@ -119,6 +139,7 @@
             this.B_Bonus.Name = "B_Bonus";
             this.B_Bonus.Size = new System.Drawing.Size(25, 25);
             this.B_Bonus.TabIndex = 7;
+            this.bonprochelp.SetToolTip(this.B_Bonus, "Подтверждение ввода бонусов или штрафов");
             this.B_Bonus.UseVisualStyleBackColor = false;
             this.B_Bonus.Click += new System.EventHandler(this.B_Bonus_Click);
             // 
@@ -133,6 +154,7 @@
             this.L_Timer.Size = new System.Drawing.Size(37, 16);
             this.L_Timer.TabIndex = 8;
             this.L_Timer.Text = "time";
+            this.timehelp.SetToolTip(this.L_Timer, "Остаток бонусного времени");
             // 
             // B_Start
             // 
@@ -143,6 +165,7 @@
             this.B_Start.Name = "B_Start";
             this.B_Start.Size = new System.Drawing.Size(80, 35);
             this.B_Start.TabIndex = 9;
+            this.Starthelp.SetToolTip(this.B_Start, "Начало работы");
             this.B_Start.UseVisualStyleBackColor = true;
             this.B_Start.Click += new System.EventHandler(this.B_Start_Click);
             // 
@@ -155,6 +178,7 @@
             this.B_Setup.Name = "B_Setup";
             this.B_Setup.Size = new System.Drawing.Size(25, 25);
             this.B_Setup.TabIndex = 10;
+            this.setthelp.SetToolTip(this.B_Setup, "Настройки");
             this.B_Setup.UseVisualStyleBackColor = true;
             this.B_Setup.Click += new System.EventHandler(this.B_Setup_Click);
             // 
@@ -167,6 +191,7 @@
             this.B_Help.Name = "B_Help";
             this.B_Help.Size = new System.Drawing.Size(25, 25);
             this.B_Help.TabIndex = 11;
+            this.helphelp.SetToolTip(this.B_Help, "Помощь");
             this.B_Help.UseVisualStyleBackColor = true;
             // 
             // CB_Date
@@ -177,6 +202,7 @@
             this.CB_Date.Size = new System.Drawing.Size(261, 21);
             this.CB_Date.TabIndex = 13;
             this.CB_Date.Text = "01.01.2001";
+            this.datehelp.SetToolTip(this.CB_Date, "Выбор даты истории");
             this.CB_Date.SelectedIndexChanged += new System.EventHandler(this.CB_Date_SelectedIndexChanged);
             // 
             // LB_History
@@ -186,6 +212,7 @@
             this.LB_History.Name = "LB_History";
             this.LB_History.Size = new System.Drawing.Size(261, 251);
             this.LB_History.TabIndex = 14;
+            this.hishelp.SetToolTip(this.LB_History, "Вывод истории за выбраный день");
             // 
             // label1
             // 
@@ -343,6 +370,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ToolTip procevahelp;
+        private System.Windows.Forms.ToolTip Evahelp;
+        private System.Windows.Forms.ToolTip namhelp;
+        private System.Windows.Forms.ToolTip totalhelp;
+        private System.Windows.Forms.ToolTip bonhelp;
+        private System.Windows.Forms.ToolTip commhelp;
+        private System.Windows.Forms.ToolTip bonprochelp;
+        private System.Windows.Forms.ToolTip timehelp;
+        private System.Windows.Forms.ToolTip Starthelp;
+        private System.Windows.Forms.ToolTip setthelp;
+        private System.Windows.Forms.ToolTip helphelp;
+        private System.Windows.Forms.ToolTip datehelp;
+        private System.Windows.Forms.ToolTip hishelp;
     }
 }
 

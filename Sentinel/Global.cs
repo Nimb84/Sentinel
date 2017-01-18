@@ -19,7 +19,7 @@ namespace Sentinel
             //бонусный таймер (в сек)
         public static int bonustimer = 420;
             //стоимость минуты
-        public static int cost = 0;
+        public static int cost = 3;
             //таймер
         public static string time = "null";
 

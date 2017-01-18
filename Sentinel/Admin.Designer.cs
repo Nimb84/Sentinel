@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.B_ShowPass = new System.Windows.Forms.Button();
             this.L_Pass = new System.Windows.Forms.Label();
             this.B_RePass = new System.Windows.Forms.Button();
@@ -44,6 +45,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.plushelp = new System.Windows.Forms.ToolTip(this.components);
+            this.minhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.repasshelp = new System.Windows.Forms.ToolTip(this.components);
+            this.showpasshelp = new System.Windows.Forms.ToolTip(this.components);
+            this.exithelp = new System.Windows.Forms.ToolTip(this.components);
+            this.conthelp = new System.Windows.Forms.ToolTip(this.components);
+            this.lesshelp = new System.Windows.Forms.ToolTip(this.components);
+            this.enterlesshelp = new System.Windows.Forms.ToolTip(this.components);
+            this.recosthelp = new System.Windows.Forms.ToolTip(this.components);
+            this.costhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.evahelp = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // B_ShowPass
@@ -51,10 +63,11 @@
             this.B_ShowPass.BackgroundImage = global::Sentinel.Properties.Resources.B_25x25_See;
             this.B_ShowPass.FlatAppearance.BorderSize = 0;
             this.B_ShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_ShowPass.Location = new System.Drawing.Point(82, 334);
+            this.B_ShowPass.Location = new System.Drawing.Point(82, 333);
             this.B_ShowPass.Name = "B_ShowPass";
             this.B_ShowPass.Size = new System.Drawing.Size(25, 25);
             this.B_ShowPass.TabIndex = 1;
+            this.showpasshelp.SetToolTip(this.B_ShowPass, "Показать/скрыть пароль");
             this.B_ShowPass.UseVisualStyleBackColor = true;
             this.B_ShowPass.Click += new System.EventHandler(this.B_ShowPass_Click);
             // 
@@ -78,6 +91,7 @@
             this.B_RePass.Size = new System.Drawing.Size(80, 25);
             this.B_RePass.TabIndex = 2;
             this.B_RePass.Text = "Изменить";
+            this.repasshelp.SetToolTip(this.B_RePass, "Изменить пароль");
             this.B_RePass.UseVisualStyleBackColor = true;
             this.B_RePass.Click += new System.EventHandler(this.B_RePass_Click);
             // 
@@ -88,11 +102,12 @@
             this.B_Sell.FlatAppearance.BorderSize = 0;
             this.B_Sell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.B_Sell.ForeColor = System.Drawing.Color.Black;
-            this.B_Sell.Location = new System.Drawing.Point(113, 53);
+            this.B_Sell.Location = new System.Drawing.Point(113, 51);
             this.B_Sell.Name = "B_Sell";
             this.B_Sell.Size = new System.Drawing.Size(80, 25);
             this.B_Sell.TabIndex = 3;
             this.B_Sell.Text = "Изменить";
+            this.recosthelp.SetToolTip(this.B_Sell, "Подтверждение изменение оценки");
             this.B_Sell.UseVisualStyleBackColor = false;
             this.B_Sell.Click += new System.EventHandler(this.B_Sell_Click);
             // 
@@ -102,6 +117,7 @@
             this.TB_EvaCost.Name = "TB_EvaCost";
             this.TB_EvaCost.Size = new System.Drawing.Size(95, 20);
             this.TB_EvaCost.TabIndex = 1;
+            this.costhelp.SetToolTip(this.TB_EvaCost, "Стоимость оценки");
             // 
             // CB_Eva
             // 
@@ -111,6 +127,7 @@
             this.CB_Eva.Size = new System.Drawing.Size(54, 21);
             this.CB_Eva.TabIndex = 0;
             this.CB_Eva.Text = "1";
+            this.evahelp.SetToolTip(this.CB_Eva, "Выбор оценки");
             this.CB_Eva.SelectedIndexChanged += new System.EventHandler(this.CB_Eva_SelectedIndexChanged);
             // 
             // B_Play
@@ -124,6 +141,7 @@
             this.B_Play.Size = new System.Drawing.Size(80, 25);
             this.B_Play.TabIndex = 4;
             this.B_Play.Text = "Продолжить";
+            this.conthelp.SetToolTip(this.B_Play, "Продолжить работу програмы");
             this.B_Play.UseVisualStyleBackColor = true;
             this.B_Play.Click += new System.EventHandler(this.B_Play_Click);
             // 
@@ -132,11 +150,12 @@
             this.B_Exit.BackgroundImage = global::Sentinel.Properties.Resources.B_80x35;
             this.B_Exit.FlatAppearance.BorderSize = 0;
             this.B_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_Exit.Location = new System.Drawing.Point(11, 383);
+            this.B_Exit.Location = new System.Drawing.Point(8, 383);
             this.B_Exit.Name = "B_Exit";
             this.B_Exit.Size = new System.Drawing.Size(80, 35);
             this.B_Exit.TabIndex = 5;
             this.B_Exit.Text = "Выход из программы";
+            this.exithelp.SetToolTip(this.B_Exit, "Выход из програмы");
             this.B_Exit.UseVisualStyleBackColor = true;
             this.B_Exit.Click += new System.EventHandler(this.B_Exit_Click);
             // 
@@ -149,6 +168,7 @@
             this.B_DelLess.Name = "B_DelLess";
             this.B_DelLess.Size = new System.Drawing.Size(25, 25);
             this.B_DelLess.TabIndex = 3;
+            this.minhelp.SetToolTip(this.B_DelLess, "Удалить выбраный предмет");
             this.B_DelLess.UseVisualStyleBackColor = true;
             this.B_DelLess.Click += new System.EventHandler(this.B_DelLess_Click);
             // 
@@ -161,6 +181,7 @@
             this.B_PlusLess.Name = "B_PlusLess";
             this.B_PlusLess.Size = new System.Drawing.Size(25, 25);
             this.B_PlusLess.TabIndex = 2;
+            this.plushelp.SetToolTip(this.B_PlusLess, "Добавить введеный предмет");
             this.B_PlusLess.UseVisualStyleBackColor = true;
             this.B_PlusLess.Click += new System.EventHandler(this.B_PlusLess_Click);
             // 
@@ -170,6 +191,7 @@
             this.TB_Less.Name = "TB_Less";
             this.TB_Less.Size = new System.Drawing.Size(114, 20);
             this.TB_Less.TabIndex = 1;
+            this.enterlesshelp.SetToolTip(this.TB_Less, "Ввод предмета");
             this.TB_Less.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Less_KeyDown);
             // 
             // LB_Less
@@ -179,6 +201,7 @@
             this.LB_Less.Name = "LB_Less";
             this.LB_Less.Size = new System.Drawing.Size(177, 173);
             this.LB_Less.TabIndex = 0;
+            this.lesshelp.SetToolTip(this.LB_Less, "Доступные предметы");
             this.LB_Less.SelectedIndexChanged += new System.EventHandler(this.LB_Less_SelectedIndexChanged);
             // 
             // label1
@@ -276,5 +299,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolTip showpasshelp;
+        private System.Windows.Forms.ToolTip repasshelp;
+        private System.Windows.Forms.ToolTip recosthelp;
+        private System.Windows.Forms.ToolTip costhelp;
+        private System.Windows.Forms.ToolTip evahelp;
+        private System.Windows.Forms.ToolTip conthelp;
+        private System.Windows.Forms.ToolTip exithelp;
+        private System.Windows.Forms.ToolTip minhelp;
+        private System.Windows.Forms.ToolTip plushelp;
+        private System.Windows.Forms.ToolTip enterlesshelp;
+        private System.Windows.Forms.ToolTip lesshelp;
     }
 }

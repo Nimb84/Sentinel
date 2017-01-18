@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TB_Pass = new System.Windows.Forms.TextBox();
             this.B_Ok = new System.Windows.Forms.Button();
             this.ChB_PlayTimer = new System.Windows.Forms.CheckBox();
@@ -35,6 +36,10 @@
             this.L_min = new System.Windows.Forms.Label();
             this.B_Close = new System.Windows.Forms.Button();
             this.L_text = new System.Windows.Forms.Label();
+            this.timerhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.valuetimerhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.Adminhelp = new System.Windows.Forms.ToolTip(this.components);
+            this.closehelp = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // TB_Pass
@@ -58,6 +63,7 @@
             this.B_Ok.Size = new System.Drawing.Size(85, 25);
             this.B_Ok.TabIndex = 2;
             this.B_Ok.Text = "Подтвердить";
+            this.Adminhelp.SetToolTip(this.B_Ok, "Вход в административный режим");
             this.B_Ok.UseVisualStyleBackColor = true;
             this.B_Ok.Click += new System.EventHandler(this.B_Ok_Click);
             // 
@@ -72,6 +78,7 @@
             this.ChB_PlayTimer.Size = new System.Drawing.Size(161, 17);
             this.ChB_PlayTimer.TabIndex = 3;
             this.ChB_PlayTimer.Text = "Напомнить мне через:";
+            this.timerhelp.SetToolTip(this.ChB_PlayTimer, "Вкл/выкл таймер уведомления");
             this.ChB_PlayTimer.UseVisualStyleBackColor = false;
             this.ChB_PlayTimer.Click += new System.EventHandler(this.ChB_PlayTimer_Click);
             // 
@@ -85,6 +92,7 @@
             this.TB_PlayTimer.Size = new System.Drawing.Size(26, 20);
             this.TB_PlayTimer.TabIndex = 4;
             this.TB_PlayTimer.Text = "10";
+            this.valuetimerhelp.SetToolTip(this.TB_PlayTimer, "Ввод таймера");
             // 
             // L_min
             // 
@@ -107,6 +115,7 @@
             this.B_Close.Name = "B_Close";
             this.B_Close.Size = new System.Drawing.Size(20, 20);
             this.B_Close.TabIndex = 6;
+            this.closehelp.SetToolTip(this.B_Close, "Закрыть окно");
             this.B_Close.UseVisualStyleBackColor = true;
             this.B_Close.Click += new System.EventHandler(this.B_Close_Click);
             // 
@@ -155,5 +164,9 @@
         private System.Windows.Forms.Label L_min;
         private System.Windows.Forms.Button B_Close;
         private System.Windows.Forms.Label L_text;
+        private System.Windows.Forms.ToolTip Adminhelp;
+        private System.Windows.Forms.ToolTip timerhelp;
+        private System.Windows.Forms.ToolTip valuetimerhelp;
+        private System.Windows.Forms.ToolTip closehelp;
     }
 }
