@@ -16,7 +16,7 @@ namespace Sentinel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Gen());
+            Application.Run(new Gen()); 
         }
     }
 }
