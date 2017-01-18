@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoForm));
             this.L_cost = new System.Windows.Forms.Label();
             this.L_time = new System.Windows.Forms.Label();
             this.L_total = new System.Windows.Forms.Label();
@@ -87,6 +88,7 @@
             this.Controls.Add(this.L_cost);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InfoForm";
             this.Text = "InfoForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InfoForm_FormClosing);

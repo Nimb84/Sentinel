@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
             this.TB_Pass = new System.Windows.Forms.TextBox();
             this.B_Ok = new System.Windows.Forms.Button();
             this.ChB_PlayTimer = new System.Windows.Forms.CheckBox();
@@ -146,6 +147,7 @@
             this.Controls.Add(this.B_Ok);
             this.Controls.Add(this.TB_Pass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Setting";
             this.Text = "Setting";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Setting_FormClosed);

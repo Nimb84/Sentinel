@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.B_ShowPass = new System.Windows.Forms.Button();
             this.L_Pass = new System.Windows.Forms.Label();
             this.B_RePass = new System.Windows.Forms.Button();
@@ -272,6 +273,7 @@
             this.Controls.Add(this.B_Play);
             this.Controls.Add(this.CB_Eva);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
