@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.IO;
 using System.Media;
 using System.Threading;
@@ -24,6 +25,13 @@ namespace Sentinel
             //проверка первого запуска(общего)
             if (Global.first)
             {
+                //добавление в автозагрузку
+                string ExePath = Application.ExecutablePath;
+                RegistryKey reg;
+                reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+                reg.SetValue("Sentinel", ExePath);
+                reg.Close();
+
                 //остановка доп.таймера
                 Global.AdminOn = true;
                 //Открытие АдминФормы
