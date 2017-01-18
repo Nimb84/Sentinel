@@ -15,8 +15,11 @@ namespace Sentinel
         public Repass()
         {
             InitializeComponent();
+            //this.StartPosition = FormStartPosition.Manual;
+            //this.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 2 - this.Width - 100,
+            //    Screen.PrimaryScreen.Bounds.Height / 2 - this.Height - 104);
         }
-
+        //кнопка подтверждения
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -25,6 +28,7 @@ namespace Sentinel
                 {
                     Passwosd.pass = TB_Repass.Text;
                     Passwosd.ReUnitPass();
+                    //админформа
                     Close();
                     MessageBox.Show("Пароль изменен!");
                 }
@@ -42,11 +46,15 @@ namespace Sentinel
             TB_Repass.MaxLength = 8;
             TB_Repass2.PasswordChar = '*';
             TB_Repass2.MaxLength = 8;
+
+
         }
 
         private void Repass_FormClosed(object sender, FormClosedEventArgs e)
         {
             Passwosd.repass = false;
+            Form ifrm = Application.OpenForms[1];
+            ifrm.Show();
         }
 
         private void B_Cansel_Click(object sender, EventArgs e)

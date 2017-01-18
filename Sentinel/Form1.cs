@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Media;
 using System.Threading;
 using System.Windows.Forms;
@@ -7,15 +8,31 @@ namespace Sentinel
 {
     public partial class Gen : Form
     {
-            //стандартная строка инициализации компонентов формы
-        public Gen() { InitializeComponent(); }
-
-            //создание делегата для доступа к форме из других потов
+        //создание делегата для доступа к форме из других потов
         public delegate void InvokeDelegate();
+
+        //стандартная строка инициализации компонентов формы
+        public Gen()
+        {
+            InitializeComponent();
+        }
 
             //при загрузке формы
         private void Gen_Load(object sender, EventArgs e)
         {
+            Global.first = Initials.FirstStart();
+            //проверка первого запуска(общего)
+            if (Global.first)
+            {
+                //остановка доп.таймера
+                Global.AdminOn = true;
+                //Открытие АдминФормы
+                Admin Admfrm = new Admin();
+                Admfrm.Show();
+                //BeginInvoke(new InvokeDelegate(HideGen));
+            }
+
+            //инит дейт
             Global.date = Initials.InitialDate("yyMMdd");
                 //проверка первого запуска (макет) (раз в день)
             Initials.CheckFirstStart();

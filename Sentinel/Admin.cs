@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Sentinel
 {
     public partial class Admin : Form
     {
+        //создание делегата для доступа к форме из других потов
+        public delegate void InvokeDelegate();
+
         public Admin()
         {
             InitializeComponent();
@@ -16,6 +20,18 @@ namespace Sentinel
             InitAdmin.Init_CB_Eva(this);
             TB_EvaCost.Text = Convert.ToString(Work.Eva(1));
             ActionsForms.InitLessAdmin(this);
+
+            if (Global.first)
+            {
+                Global.first = false;
+                //
+                StreamWriter writer = new StreamWriter(Global.path + @"base\first.txt", false);
+                //
+                writer.WriteLine("false");
+                //закрытие потока
+                writer.Close();
+                B_RePass_Click(sender, e);
+            }
 
         }
 
@@ -56,6 +72,7 @@ namespace Sentinel
                 Repass repass = new Repass();
                 repass.Show();
                 Passwosd.repass = true;
+                BeginInvoke(new InvokeDelegate(HideFrm));
             }
         }
         //кнопка выхода из программы
@@ -109,6 +126,11 @@ namespace Sentinel
             {
                 B_PlusLess_Click(sender, e);
             }
+        }
+
+        private void HideFrm()
+        {
+            Hide();
         }
     }
 }

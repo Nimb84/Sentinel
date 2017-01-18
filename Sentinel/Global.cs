@@ -7,6 +7,9 @@ namespace Sentinel
     {
             //определяет путь приложения
         public static string path = Application.StartupPath.ToString() + @"\Data\";
+        //булевая первичного запуска (общего)
+        public static bool first = true;
+
             //считывает общий счет кредитов
         public static int total = Initials.InitTotal();
             //определяет дату включение приложения (поменян порядок, для правильной сортировки историй)

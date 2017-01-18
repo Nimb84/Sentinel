@@ -7,11 +7,22 @@ namespace Sentinel
     class Initials
     {
 
-        public static void Initials_Globals()
+        //инициализация первичного запуска (с вывдом формы Администратора, задание пароля и т.п.)
+        public static bool FirstStart()
         {
-
+            StreamReader rfile = new StreamReader(Global.path + @"base\first.txt", System.Text.Encoding.UTF8);
+            bool first = Boolean.Parse(rfile.ReadLine());
+            rfile.Close();
+            //+ - показ, минус - нет (логично)
+            if (first)
+            {
+                return true;
+            }
+            else
+                return false;
         }
-        //проверка на первичный пуск
+
+        //проверка на первичный пуск (раз в день)
         public static void CheckFirstStart()
         {
             //(тестово) проверяет наличие записи истории, если таковой нету, то создает его и записывает первую строку
